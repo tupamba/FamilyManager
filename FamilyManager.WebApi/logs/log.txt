@@ -1,0 +1,364 @@
+FATAL 2018-07-20 16:05:21,520 337350ms FamilyController       MoveNext           - Referencia a objeto no establecida como instancia de un objeto.
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en FamilyManager.WebApi.Controllers.FamilyController.<Family>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 30
+FATAL 2018-07-24 08:58:33,095 171513ms FamilyController       MoveNext           - Foreign key 'FK_dbo.MemberFamilies_dbo.GroupFamilies_GroupFamily_Id' references invalid table 'dbo.GroupFamilies'.
+Could not create constraint. See previous errors.
+System.Data.SqlClient.SqlException (0x80131904): Foreign key 'FK_dbo.MemberFamilies_dbo.GroupFamilies_GroupFamily_Id' references invalid table 'dbo.GroupFamilies'.
+Could not create constraint. See previous errors.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteSql(MigrationStatement migrationStatement, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinTransaction(IEnumerable`1 migrationStatements, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinNewTransaction(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection)
+   en System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClass30.<ExecuteStatements>b__2e()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements, DbTransaction existingTransaction)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteOperations(String migrationId, VersionedModel targetModel, IEnumerable`1 operations, IEnumerable`1 systemOperations, Boolean downgrading, Boolean auto)
+   en System.Data.Entity.Migrations.DbMigrator.AutoMigrate(String migrationId, VersionedModel sourceModel, VersionedModel targetModel, Boolean downgrading)
+   en System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)
+   en System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)
+   en System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClassc.<Update>b__b()
+   en System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+   en System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   en System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.GetAsyncEnumerator()
+   en System.Data.Entity.Infrastructure.DbQuery`1.System.Data.Entity.Infrastructure.IDbAsyncEnumerable<TResult>.GetAsyncEnumerator()
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.ForEachAsync[T](IDbAsyncEnumerable`1 source, Action`1 action, CancellationToken cancellationToken)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.ToListAsync[T](IDbAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.ToListAsync[T](IDbAsyncEnumerable`1 source)
+   en System.Data.Entity.QueryableExtensions.ToListAsync[TSource](IQueryable`1 source)
+   en FamilyManager.WebApi.Controllers.FamilyController.<GetFamily>d__7.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 41
+ClientConnectionId:80994d9c-efec-4145-ae39-9f46f25f6262
+Error Number:1767,State:0,Class:16
+FATAL 2018-07-24 08:59:00,959 199376ms FamilyController       MoveNext           - Foreign key 'FK_dbo.MemberFamilies_dbo.GroupFamilies_GroupFamily_Id' references invalid table 'dbo.GroupFamilies'.
+Could not create constraint. See previous errors.
+System.Data.SqlClient.SqlException (0x80131904): Foreign key 'FK_dbo.MemberFamilies_dbo.GroupFamilies_GroupFamily_Id' references invalid table 'dbo.GroupFamilies'.
+Could not create constraint. See previous errors.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteSql(MigrationStatement migrationStatement, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinTransaction(IEnumerable`1 migrationStatements, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinNewTransaction(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection)
+   en System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClass30.<ExecuteStatements>b__2e()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements, DbTransaction existingTransaction)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteOperations(String migrationId, VersionedModel targetModel, IEnumerable`1 operations, IEnumerable`1 systemOperations, Boolean downgrading, Boolean auto)
+   en System.Data.Entity.Migrations.DbMigrator.AutoMigrate(String migrationId, VersionedModel sourceModel, VersionedModel targetModel, Boolean downgrading)
+   en System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)
+   en System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)
+   en System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClassc.<Update>b__b()
+   en System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+   en System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   en System.Data.Entity.MigrateDatabaseToLatestVersion`2.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.GetAsyncEnumerator()
+   en System.Data.Entity.Infrastructure.DbQuery`1.System.Data.Entity.Infrastructure.IDbAsyncEnumerable<TResult>.GetAsyncEnumerator()
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.ForEachAsync[T](IDbAsyncEnumerable`1 source, Action`1 action, CancellationToken cancellationToken)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.ToListAsync[T](IDbAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.ToListAsync[T](IDbAsyncEnumerable`1 source)
+   en System.Data.Entity.QueryableExtensions.ToListAsync[TSource](IQueryable`1 source)
+   en FamilyManager.WebApi.Controllers.FamilyController.<GetFamily>d__7.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 41
+ClientConnectionId:80994d9c-efec-4145-ae39-9f46f25f6262
+Error Number:1767,State:0,Class:16
+FATAL 2018-07-24 09:18:20,161 31518ms FamilyController       MoveNext           - Método no encontrado: 'System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasIndex(System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>)'.
+System.MissingMethodException: Método no encontrado: 'System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasIndex(System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>)'.
+   en FamilyManager.DataProvider.DbModel.OnModelCreating(DbModelBuilder modelBuilder)
+   en System.Data.Entity.Internal.LazyInternalContext.CreateModelBuilder()
+   en System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   en System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   en System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   en System.Data.Entity.QueryableExtensions.AnyAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   en System.Data.Entity.QueryableExtensions.AnyAsync[TSource](IQueryable`1 source, Expression`1 predicate)
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__8.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 58
+FATAL 2018-07-24 09:18:34,735 46091ms FamilyController       MoveNext           - Método no encontrado: 'System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasIndex(System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>)'.
+System.MissingMethodException: Método no encontrado: 'System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasIndex(System.Linq.Expressions.Expression`1<System.Func`2<!0,!!0>>)'.
+   en FamilyManager.DataProvider.DbModel.OnModelCreating(DbModelBuilder modelBuilder)
+   en System.Data.Entity.Internal.LazyInternalContext.CreateModelBuilder()
+   en System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   en System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   en System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   en System.Data.Entity.QueryableExtensions.AnyAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   en System.Data.Entity.QueryableExtensions.AnyAsync[TSource](IQueryable`1 source, Expression`1 predicate)
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__8.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 58
+FATAL 2018-07-24 09:21:07,123 39561ms FamilyController       MoveNext           - There is already an object named '__MigrationHistory' in the database.
+System.Data.SqlClient.SqlException (0x80131904): There is already an object named '__MigrationHistory' in the database.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteSql(MigrationStatement migrationStatement, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinTransaction(IEnumerable`1 migrationStatements, DbTransaction transaction, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsWithinNewTransaction(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatementsInternal(IEnumerable`1 migrationStatements, DbConnection connection)
+   en System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClass30.<ExecuteStatements>b__2e()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements, DbTransaction existingTransaction)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteStatements(IEnumerable`1 migrationStatements)
+   en System.Data.Entity.Migrations.DbMigrator.ExecuteOperations(String migrationId, VersionedModel targetModel, IEnumerable`1 operations, IEnumerable`1 systemOperations, Boolean downgrading, Boolean auto)
+   en System.Data.Entity.Migrations.DbMigrator.AutoMigrate(String migrationId, VersionedModel sourceModel, VersionedModel targetModel, Boolean downgrading)
+   en System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)
+   en System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)
+   en System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClassc.<Update>b__b()
+   en System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+   en System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   en System.Data.Entity.Internal.DatabaseCreator.CreateDatabase(InternalContext internalContext, Func`3 createMigrator, ObjectContext objectContext)
+   en System.Data.Entity.Internal.InternalContext.CreateDatabase(ObjectContext objectContext, DatabaseExistenceState existenceState)
+   en System.Data.Entity.Database.Create(DatabaseExistenceState existenceState)
+   en System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   en System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   en System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   en System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   en System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   en System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   en System.Data.Entity.QueryableExtensions.AnyAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   en System.Data.Entity.QueryableExtensions.AnyAsync[TSource](IQueryable`1 source, Expression`1 predicate)
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__8.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 58
+ClientConnectionId:144a8944-6848-490a-a407-be56bc6e5fa9
+Error Number:2714,State:6,Class:16
+FATAL 2018-07-24 09:33:45,989 58903ms FamilyController       MoveNext           - Error al actualizar las entradas. Vea la excepción interna para obtener detalles.
+System.Data.Entity.Infrastructure.DbUpdateException: Error al actualizar las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.Entity.Core.UpdateException: Error al actualizar las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.GroupFamilies' with unique index 'IX_Name'. The duplicate key value is (Silva).
+The statement has been terminated.
+   en System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__8.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 65
+FATAL 2018-07-25 12:13:38,146 111740ms FamilyController       MoveNext           - Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles.
+System.Data.Entity.Infrastructure.DbUpdateException: Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles. ---> System.Data.Entity.Core.UpdateException: Error al actualizar las entradas. Vea la excepción interna para obtener detalles. ---> System.Data.SqlClient.SqlException: Cannot insert duplicate key row in object 'dbo.MemberFamilies' with unique index 'IX_UserName'. The duplicate key value is (tupamba@gmail.com).
+The statement has been terminated.
+   en System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__174_0(Task`1 result)
+   en System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   en System.Threading.Tasks.Task.Execute()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__8.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 69
+FATAL 2018-07-25 12:34:44,925 133589ms FamilyController       MoveNext           - Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions. ---> System.Data.Entity.Core.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ValidateRowsAffected(Int64 rowsAffected, UpdateCommand source)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__8.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 77
+FATAL 2018-07-30 08:07:26,321 119603ms FamilyController       InvitationtoFamily - El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at
+System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en FamilyManager.WebApi.Models.FamilyInvitationModels.SendtoMail(String tosend, String family) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Models\FamilyModels.cs:línea 107
+   en FamilyManager.WebApi.Controllers.FamilyController.SendInvitationtoFamily(FamilyInvitationModels model) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 112
+FATAL 2018-07-31 16:56:36,710 127611ms FamilyController       MoveNext           - Invalid column name 'Owner'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Owner'.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryInternal[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__64()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass65`1.<ExecuteStoreQueryReliably>b__63()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQueryReliably[TElement](String commandText, String entitySetName, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteStoreQuery[TElement](String commandText, ExecutionOptions executionOptions, Object[] parameters)
+   en System.Data.Entity.Internal.InternalContext.<>c__DisplayClass14`1.<ExecuteSqlQuery>b__13()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   en FamilyManager.WebApi.Models.AddFamilyBindingModels.ValidateAddFamily(DbModel modelFamily, String user) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Models\FamilyModels.cs:línea 30
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__8.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 62
+ClientConnectionId:bc479712-6e00-417e-a378-0acb8cefd358
+Error Number:207,State:1,Class:16
+FATAL 2018-07-31 17:06:31,918 110158ms FamilyController       InvitationtoFamily - El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at
+System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en FamilyManager.WebApi.Models.FamilyInvitationModels.SendtoMail(String tosend, String family) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Models\FamilyModels.cs:línea 154
+   en FamilyManager.WebApi.Controllers.FamilyController.SendInvitationtoFamily(FamilyInvitationModels model) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 112
+FATAL 2018-07-31 17:10:23,171 117719ms FamilyController       InvitationtoFamily - El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.0 Must issue a STARTTLS command first. g19-v6sm11139105qtk.80 - gsmtp
+System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.0 Must issue a STARTTLS command first. g19-v6sm11139105qtk.80 - gsmtp
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en FamilyManager.WebApi.Models.FamilyInvitationModels.SendtoMail(String tosend, String family) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Models\FamilyModels.cs:línea 154
+   en FamilyManager.WebApi.Controllers.FamilyController.SendInvitationtoFamily(FamilyInvitationModels model) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 112
+FATAL 2018-07-31 17:15:24,267 13150ms FamilyController       InvitationtoFamily - El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at
+System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en FamilyManager.WebApi.Models.FamilyInvitationModels.SendtoMail(String tosend, String family) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Models\FamilyModels.cs:línea 154
+   en FamilyManager.WebApi.Controllers.FamilyController.SendInvitationtoFamily(FamilyInvitationModels model) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 112
+FATAL 2018-07-31 17:16:14,854 13221ms FamilyController       InvitationtoFamily - El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.0 Must issue a STARTTLS command first. h10-v6sm7587289qtm.48 - gsmtp
+System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.0 Must issue a STARTTLS command first. h10-v6sm7587289qtm.48 - gsmtp
+   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en FamilyManager.WebApi.Models.FamilyInvitationModels.SendtoMail(String tosend, String family) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Models\FamilyModels.cs:línea 154
+   en FamilyManager.WebApi.Controllers.FamilyController.SendInvitationtoFamily(FamilyInvitationModels model) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 112

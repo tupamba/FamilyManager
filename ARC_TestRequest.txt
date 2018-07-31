@@ -1,0 +1,11 @@
+http://localhost:3460/api/Account/Register -> {"Email":"tupamba@gmail.com","Password":"Blanquillo0640*","ConfirmPassword":"Blanquillo0640*"}
+http://localhost:3460/Token [Content-Type: application/x-www-form-urlencoded] -> grant_type=password&username=tupamba@gmail.com&password=Blanquillo0640*
+Response:	{
+"access_token": "Crm0uiUEX3eTQGP7ERKZ-FKRiBnjHNHfE75BHqBCfA64vhsmCbPyiI1EMdQU9F7tXXEuuQOYd9qogXUwJWSDs15Vu-yxUXczjnpmh7JXNnmGdb-UD13hCV3dBqrWYj2crXnT0TQs3vDByrM8FI8h2QPT_f-zn4-IU8fbhnoNH0mmmSWfvgjhhtDMqWAbVx-JOuWaKv_iN3L8n3_UWKB3EzOWpCiaP9yOF-hENLcsKbpX8YHjKN6rA4f0Tjnp0d1MPADDLP4-W5dKWJAZ4UYxUqiyTYd_qC_tTw1idz5NfUGBs9RbCM-Mq58RPUu-B3KH0iUuUePrp7ERxk7PFN8mORp3cdwUTRIJp4BX_0sUKerWh38bC_VX58O8fdoejQ_eKNU-tyZSmtHgPB99hmQMxGjHmgIqeBSq1WuzutT9FvU-y7pybODEgGxT4MyMr6WYXeR00y6xPeCUDpZOlW5QAnwatAXemiV1y1-C2Hr9kClNDDw4eL1vHuKcRJI9MuT2",
+"token_type": "bearer",
+"expires_in": 1209599,
+"userName": "tupamba@gmail.com",
+".issued": "Mon, 16 Jul 2018 14:37:36 GMT",
+".expires": "Mon, 30 Jul 2018 14:37:36 GMT"
+}	
+http://localhost:3460/api/values/1 [Authorization: Bearer Crm0uiUEX3eTQGP7ERKZ-FKRiBnjHNHfE75BHqBCfA64vhsmCbPyiI1EMdQU9F7tXXEuuQOYd9qogXUwJWSDs15Vu-yxUXczjnpmh7JXNnmGdb-UD13hCV3dBqrWYj2crXnT0TQs3vDByrM8FI8h2QPT_f-zn4-IU8fbhnoNH0mmmSWfvgjhhtDMqWAbVx-JOuWaKv_iN3L8n3_UWKB3EzOWpCiaP9yOF-hENLcsKbpX8YHjKN6rA4f0Tjnp0d1MPADDLP4-W5dKWJAZ4UYxUqiyTYd_qC_tTw1idz5NfUGBs9RbCM-Mq58RPUu-B3KH0iUuUePrp7ERxk7PFN8mORp3cdwUTRIJp4BX_0sUKerWh38bC_VX58O8fdoejQ_eKNU-tyZSmtHgPB99hmQMxGjHmgIqeBSq1WuzutT9FvU-y7pybODEgGxT4MyMr6WYXeR00y6xPeCUDpZOlW5QAnwatAXemiV1y1-C2Hr9kClNDDw4eL1vHuKcRJI9MuT2]											

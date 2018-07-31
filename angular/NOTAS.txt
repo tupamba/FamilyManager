@@ -1,0 +1,3 @@
+Terminar de armar el regitro de usuario
+Pasar el pipe de idioma del cusro de angular a esta solucion
+Evaluar pasar el template
