@@ -36,8 +36,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // Start the connection up!
     //
-    console.log("Starting the channel service");
+   // console.log("Starting the channel service");
 
-    this.channelService.start();
+   // this.channelService.start();
   }
 }

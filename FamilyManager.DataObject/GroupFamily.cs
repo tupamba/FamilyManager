@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace FamilyManager.DataObject
 {
-    public class GroupFamily
+    public class GroupFamily : IDisposable
     {
         public long Id { get; set; }
         [MaxLength(200)]
         [Index("IX_Name", 1, IsUnique = true)]
         public string Name { get; set; }
+        [ForeignKey("Owner")]
+        public long? Owner_Id { get; set; }
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<MemberFamily> MembersFamily { get; set; }
         public GroupFamily() { }
@@ -25,8 +27,12 @@ namespace FamilyManager.DataObject
             Name = name;
             Owner = owner;
         }
+
+        public void Dispose()
+        {
+        }
     }
-    public class MemberFamily
+    public class MemberFamily : IDisposable
     {
         public long Id { get; set; }
         [MaxLength(500)]
@@ -36,6 +42,10 @@ namespace FamilyManager.DataObject
         public MemberFamily(string name)
         {
             UserName = name;
+        }
+
+        public void Dispose()
+        {
         }
     }
 }

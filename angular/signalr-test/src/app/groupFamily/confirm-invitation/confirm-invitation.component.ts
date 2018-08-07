@@ -12,7 +12,7 @@ import { AlertService } from '../../service/alert.service';
 export class ConfirmInvitationComponent implements OnInit, OnDestroy {
   private family:string;
   private suscribe:any;
-  loading = false;
+  private loading = false;
   constructor(private route: ActivatedRoute, 
     private service:GroupFamilyService,
     private alertService: AlertService) { }

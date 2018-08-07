@@ -1,5 +1,6 @@
 ﻿using FamilyManager.DataObject;
 using FamilyManager.DataProvider;
+using FamilyManager.Repository;
 using FamilyManager.WebApi.Models;
 using FamilyManager.WebApi.Providers;
 using System;
@@ -25,13 +26,45 @@ namespace FamilyManager.WebApi.Models
     {
         [Required(ErrorMessage = "Nombre es un dato obligatorio")]
         public string FamilyName { get; set; }
-
-        public ResponseFamilyErrorEnum ValidateAddFamily(DbModel modelFamily, string user)
+        public GroupFamily GetGroupFamily()
         {
-            SqlParameter param1 = new SqlParameter("@Name", FamilyName);
-            SqlParameter param2 = new SqlParameter("@Owner", user);
-            return (ResponseFamilyErrorEnum)modelFamily.
-                Database.SqlQuery<int>("SelectFamily @Name, @Owner", param1, param2).FirstOrDefault();
+            return new GroupFamily()
+            { Name = FamilyName};
+        }
+        public async Task<ResponseFamilyErrorEnum> ValidateAddFamily(IRepositoryBase<GroupFamily> modelFamily, string user)
+        {
+            Dictionary<string, string> data = new Dictionary<string, string>();
+            data.Add("Name", FamilyName);
+            data.Add("Owner", user);
+            var result = await modelFamily.QueryExecuteAsync<int>("SelectFamily @Name, @Owner", data);
+            return (ResponseFamilyErrorEnum)result.FirstOrDefault();
+            //SqlParameter param1 = new SqlParameter("@Name", FamilyName);
+            //SqlParameter param2 = new SqlParameter("@Owner", user);
+            //return (ResponseFamilyErrorEnum)modelFamily.
+            //    Database.SqlQuery<int>("SelectFamily @Name, @Owner", param1, param2).FirstOrDefault();
+        }
+        public async Task<ResponseFamilyErrorEnum> InsertFamily(IRepositoryBase<GroupFamily> modelFamily, IRepositoryBase<MemberFamily> memberdb, string user)
+        {
+            try
+            {
+                var member = await memberdb.FindByConditionAync(x => x.UserName == user);
+                var userMember = member.DefaultIfEmpty(new MemberFamily(user)).FirstOrDefault();
+                modelFamily.Create(
+                            new GroupFamily(new List<MemberFamily>()
+                            { userMember
+                            }, FamilyName, userMember));
+                var result = await modelFamily.SaveAsync();
+                if (result != 0)
+                    return ResponseFamilyErrorEnum.Ok;
+                else
+                    return ResponseFamilyErrorEnum.Error;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
         public async Task<ResponseFamilyErrorEnum> InsertFamily(DbModel modelFamily, string user)
         {

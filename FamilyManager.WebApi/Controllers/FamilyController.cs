@@ -11,6 +11,8 @@ using FamilyManager.DataObject;
 using Microsoft.AspNet.Identity.Owin;
 using FamilyManager.WebApi.Models;
 using System.Data.SqlClient;
+using FamilyManager.Repository;
+using FamilyManager.QueryCommand;
 
 namespace FamilyManager.WebApi.Controllers
 {
@@ -18,12 +20,16 @@ namespace FamilyManager.WebApi.Controllers
     [RoutePrefix("api/Family")]
     public class FamilyController : ApiController
     {
+        IRepositoryBase<GroupFamily> repository = null;
+        IGroupFamilyRepository familyRepo = null;
         private ApplicationUserManager _userManager;
         readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private DbModel modelFamily = null;
         public FamilyController()
         {
             modelFamily = new DbModel();
+            repository = new RepositoryBase<GroupFamily>(modelFamily);
+            familyRepo = new GroupFamilyRepository(modelFamily);
         }
         public ApplicationUserManager UserManager
         {
@@ -59,11 +65,16 @@ namespace FamilyManager.WebApi.Controllers
                 {
                     return BadRequest(ModelState);
                 }
-                var validate = model.ValidateAddFamily(modelFamily, RequestContext.Principal.Identity.Name);
-                if (validate == ResponseFamilyErrorEnum.Ok)
-                {
-                    validate = await model.InsertFamily(modelFamily, RequestContext.Principal.Identity.Name);
-                }
+                AddGroupFamilyCommand command = new AddGroupFamilyCommand(model.GetGroupFamily(), RequestContext.Principal.Identity.Name);
+                AddGroupFamilyCommandHandler handler = new AddGroupFamilyCommandHandler(familyRepo);
+                var validate = (ResponseFamilyErrorEnum) await handler.Execute(command);
+
+                //                var validate = await model.ValidateAddFamily(repository, RequestContext.Principal.Identity.Name);
+                //if (validate == ResponseFamilyErrorEnum.Ok)
+                //{
+                //    IRepositoryBase<MemberFamily> memberdb = new RepositoryBase<MemberFamily>(modelFamily);
+                //    validate = await model.InsertFamily(repository, memberdb, RequestContext.Principal.Identity.Name);
+                //}
                 return GetResult(new AddFamilyReponseModel() { ResponseCode = validate });
             }
             catch (Exception ex)

@@ -7,7 +7,7 @@ import { AuthGuard } from './service/_guards/auth.guard.service';
 import { ConfirmInvitationComponent } from './groupFamily/confirm-invitation/confirm-invitation.component';
  
 const appRoutes: Routes = [
-    { path: 'confirmInvitation', component: ConfirmInvitationComponent, canActivate: [AuthGuard] },
+    // { path: 'confirmInvitation', component: ConfirmInvitationComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
  

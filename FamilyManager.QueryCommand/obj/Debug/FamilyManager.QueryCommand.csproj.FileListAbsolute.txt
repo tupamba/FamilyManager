@@ -1,0 +1,13 @@
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\FamilyManager.QueryCommand.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\FamilyManager.QueryCommand.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\FamilyManager.DataObject.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\FamilyManager.Repository.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\EntityFramework.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\FamilyManager.DataProvider.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\FamilyManager.DataObject.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\FamilyManager.Repository.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\EntityFramework.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\FamilyManager.DataProvider.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\obj\Debug\FamilyManager.QueryCommand.csprojResolveAssemblyReference.cache
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\obj\Debug\FamilyManager.QueryCommand.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\obj\Debug\FamilyManager.QueryCommand.pdb

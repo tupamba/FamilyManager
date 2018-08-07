@@ -1,0 +1,14 @@
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataProvider.dll.config
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataProvider.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataProvider.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\EntityFramework.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataObject.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataObject.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\EntityFramework.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.csprojResolveAssemblyReference.cache
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.Migrations.InitialCreate.resources
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.csproj.GenerateResource.Cache
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.pdb

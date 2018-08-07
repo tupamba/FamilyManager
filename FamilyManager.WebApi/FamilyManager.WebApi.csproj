@@ -316,7 +316,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -340,6 +342,14 @@
     <ProjectReference Include="..\FamilyManager.DataProvider\FamilyManager.DataProvider.csproj">
       <Project>{2757c0a0-a628-43c2-bec7-cdab3ebd70bd}</Project>
       <Name>FamilyManager.DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FamilyManager.QueryCommand\FamilyManager.QueryCommand.csproj">
+      <Project>{d2b1061e-b99e-40f8-a8f7-7d9c8517b2fc}</Project>
+      <Name>FamilyManager.QueryCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FamilyManager.Repository\FamilyManager.Repository.csproj">
+      <Project>{1a0ec117-39f2-4d85-b0a0-fa160c716153}</Project>
+      <Name>FamilyManager.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

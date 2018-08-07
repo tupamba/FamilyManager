@@ -362,3 +362,83 @@ System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o e
    en System.Net.Mail.SmtpClient.Send(MailMessage message)
    en FamilyManager.WebApi.Models.FamilyInvitationModels.SendtoMail(String tosend, String family) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Models\FamilyModels.cs:línea 154
    en FamilyManager.WebApi.Controllers.FamilyController.SendInvitationtoFamily(FamilyInvitationModels model) en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 112
+FATAL 2018-08-07 08:21:31,129 167889ms FamilyController       MoveNext           - No se puede convertir un objeto de tipo 'FamilyManager.DataProvider.DbModel' al tipo 'FamilyManager.Repository.IUnitOfWork'.
+System.InvalidCastException: No se puede convertir un objeto de tipo 'FamilyManager.DataProvider.DbModel' al tipo 'FamilyManager.Repository.IUnitOfWork'.
+   en FamilyManager.Repository.GroupFamilyRepository.get_UnitOfWork() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.Repository\IGroupFamilyRepository.cs:línea 29
+   en FamilyManager.QueryCommand.AddGroupFamilyCommandHandler.<Execute>d__2.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\AddGroupFamilyCommand.cs:línea 39
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 70
+FATAL 2018-08-07 08:22:26,360 223120ms FamilyController       MoveNext           - No se puede convertir un objeto de tipo 'FamilyManager.DataProvider.DbModel' al tipo 'FamilyManager.Repository.IUnitOfWork'.
+System.InvalidCastException: No se puede convertir un objeto de tipo 'FamilyManager.DataProvider.DbModel' al tipo 'FamilyManager.Repository.IUnitOfWork'.
+   en FamilyManager.Repository.GroupFamilyRepository.get_UnitOfWork() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.Repository\IGroupFamilyRepository.cs:línea 29
+   en FamilyManager.QueryCommand.AddGroupFamilyCommandHandler.<Execute>d__2.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\AddGroupFamilyCommand.cs:línea 39
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 70
+FATAL 2018-08-07 08:29:44,872 23322ms FamilyController       MoveNext           - Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles.
+System.Data.Entity.Infrastructure.DbUpdateException: Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles. ---> System.Data.Entity.Core.UpdateException: No se puede determinar una ordenación válida para operaciones dependientes. Pueden existir dependencias debidas a restricciones de clave externa, requisitos del modelo o valores generados por el almacenamiento.
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.DependencyOrderingError(IEnumerable`1 remainder)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.QueryCommand.AddGroupFamilyCommandHandler.<Execute>d__2.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\AddGroupFamilyCommand.cs:línea 39
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 70
+FATAL 2018-08-07 08:33:00,392 21303ms FamilyController       MoveNext           - Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles.
+System.Data.Entity.Infrastructure.DbUpdateException: Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles. ---> System.Data.Entity.Core.UpdateException: No se puede determinar una ordenación válida para operaciones dependientes. Pueden existir dependencias debidas a restricciones de clave externa, requisitos del modelo o valores generados por el almacenamiento.
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.DependencyOrderingError(IEnumerable`1 remainder)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.QueryCommand.AddGroupFamilyCommandHandler.<Execute>d__2.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\AddGroupFamilyCommand.cs:línea 39
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 70

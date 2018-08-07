@@ -1,0 +1,10 @@
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\bin\Debug\FamilyManager.DataObject.dll.config
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\bin\Debug\FamilyManager.DataObject.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\bin\Debug\FamilyManager.DataObject.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\bin\Debug\EntityFramework.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\bin\Debug\EntityFramework.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\obj\Debug\FamilyManager.DataObject.csprojResolveAssemblyReference.cache
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\obj\Debug\FamilyManager.DataObject.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataObject\obj\Debug\FamilyManager.DataObject.pdb

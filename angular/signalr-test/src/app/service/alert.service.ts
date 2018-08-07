@@ -31,17 +31,21 @@ export class AlertService {
 
   error(message: string, keepAfterNavigationChange = false) {
     this.keepAfterNavigationChange = keepAfterNavigationChange;
-    let response = JSON.parse(message);
-    let error = "No se puedo procesar tu solicitud";
-    if(response.ModelState)
-    {
-    let pp = Object.keys(response.ModelState).map((key)=>{ return response.ModelState[key]});
+    let error = "No se puede procesar tu solicitud";
+    try {
+      let response = JSON.parse(message);
+      if(response.ModelState)
+      {
+      let pp = Object.keys(response.ModelState).map((key)=>{ return response.ModelState[key]});
+      pp.forEach(element => {
+        error += element;
+      });
+      }else if(response.error_description)
+       error = response.error_description;
+    } catch (error) {
+      
+    }
 
-    pp.forEach(element => {
-      error += element;
-    });
-    }else if(response.error_description)
-     error = response.error_description;
     this.subject.next({ type: 'error', text: error });
   }
 

@@ -2,13 +2,20 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FamilyManager.DataProvider
 {
-    public class DbModel : DbContext
+    public interface IUnitOfWork
+    {
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
+        int SaveChanges();
+    }
+    public class DbModel : DbContext, IUnitOfWork
     {
         public DbModel()
            : base("DefaultConnection")
@@ -27,6 +34,23 @@ namespace FamilyManager.DataProvider
         public DbSet<Product> Product { get; set; }
         public DbSet<CategoryProduct> CategoryProduct { get; set; }
         public DbSet<FamilyCategory> FamilyCategory { get; set; }
+
+        public async Task<IEnumerable<K>> QueryStoreExecute<K>(string query, Dictionary<string, string> paramsList)
+        {
+            if (paramsList?.Count > 0)
+            {
+                List<SqlParameter> sqlparams = new List<SqlParameter>();
+                foreach (var item in paramsList)
+                {
+                    SqlParameter param = new SqlParameter("@" + item.Key, item.Value);
+                    sqlparams.Add(param);
+                }
+                return await Database.SqlQuery<K>(query, sqlparams.ToArray()).ToListAsync();
+            }
+            else
+                return null;
+
+        }
     }
     public class DbModelDBInitializer : CreateDatabaseIfNotExists<DbModel>
     {

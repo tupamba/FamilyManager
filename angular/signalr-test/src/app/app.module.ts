@@ -19,10 +19,9 @@ import { AlertService } from './service/alert.service';
 import { LoginComponent } from './profile/login/login.component';
 import { RegisterComponent } from './profile/register/register.component';
 import { EqualValidator } from './validators/validators';
-import { AlertComponent } from './_directives/alert/alert.component';
-import { ConfirmInvitationComponent } from './groupFamily/confirm-invitation/confirm-invitation.component';
-import { GroupFamilyService } from './groupFamily/service/groupfamily.service';
 import { GlobalService } from './service/global.service';
+import { GroupFamilyModule } from './groupFamily/groupFamily.module';
+
 
 let channelConfig = new ChannelConfig();  
 channelConfig.url = "http://localhost:7331/signalr";  
@@ -33,16 +32,15 @@ channelConfig.hubName = "EventHub";
     TaskComponent,
     LoginComponent,
     RegisterComponent,
-    EqualValidator,
-    AlertComponent,
-    ConfirmInvitationComponent
+    EqualValidator
   ],
   imports: [
     BrowserModule,
     HttpModule,
     ReactiveFormsModule,
     FormsModule,
-    routing
+    routing,
+    GroupFamilyModule
   ],
   providers: [
     AppConfig,
@@ -51,7 +49,6 @@ channelConfig.hubName = "EventHub";
     AuthenticationService,
     UserService,
     AlertService,
-    GroupFamilyService,
     GlobalService,
     { provide: SignalrWindow, useValue: window },
     { provide: 'channel.config', useValue: channelConfig }
