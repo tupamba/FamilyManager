@@ -12,7 +12,10 @@ using Microsoft.AspNet.Identity.Owin;
 using FamilyManager.WebApi.Models;
 using System.Data.SqlClient;
 using FamilyManager.Repository;
-using FamilyManager.QueryCommand;
+using System.Reflection;
+using FamilyManager.WebApi.Command;
+using MediatR;
+using FamilyManager.WebApi.QueryObject;
 
 namespace FamilyManager.WebApi.Controllers
 {
@@ -20,17 +23,18 @@ namespace FamilyManager.WebApi.Controllers
     [RoutePrefix("api/Family")]
     public class FamilyController : ApiController
     {
-        IRepositoryBase<GroupFamily> repository = null;
-        IGroupFamilyRepository familyRepo = null;
+        private readonly IMediator _mediator;
+        private readonly IQueryFactory _factoryQuery;
         private ApplicationUserManager _userManager;
         readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private DbModel modelFamily = null;
-        public FamilyController()
+        public FamilyController(IMediator mediator, IQueryFactory factory)
         {
-            modelFamily = new DbModel();
-            repository = new RepositoryBase<GroupFamily>(modelFamily);
-            familyRepo = new GroupFamilyRepository(modelFamily);
+            _mediator = mediator;
+            _factoryQuery = factory;
+
         }
+   
         public ApplicationUserManager UserManager
         {
             get
@@ -45,8 +49,8 @@ namespace FamilyManager.WebApi.Controllers
         public async Task<IHttpActionResult> GetFamily()
         {
             try
-            {
-                var result = await modelFamily.GroupFamily.FirstOrDefaultAsync(x => x.Owner.UserName == RequestContext.Principal.Identity.Name);
+            {           
+                var result = await _factoryQuery.GetGroupFamilyQuery().GetforOwnerUser(RequestContext.Principal.Identity.Name);
                 return GetResult(new GetFamilyReponseModel() {FamilyName = result?.Name});
             }
             catch (Exception ex)
@@ -66,16 +70,9 @@ namespace FamilyManager.WebApi.Controllers
                     return BadRequest(ModelState);
                 }
                 AddGroupFamilyCommand command = new AddGroupFamilyCommand(model.GetGroupFamily(), RequestContext.Principal.Identity.Name);
-                AddGroupFamilyCommandHandler handler = new AddGroupFamilyCommandHandler(familyRepo);
-                var validate = (ResponseFamilyErrorEnum) await handler.Execute(command);
-
-                //                var validate = await model.ValidateAddFamily(repository, RequestContext.Principal.Identity.Name);
-                //if (validate == ResponseFamilyErrorEnum.Ok)
-                //{
-                //    IRepositoryBase<MemberFamily> memberdb = new RepositoryBase<MemberFamily>(modelFamily);
-                //    validate = await model.InsertFamily(repository, memberdb, RequestContext.Principal.Identity.Name);
-                //}
-                return GetResult(new AddFamilyReponseModel() { ResponseCode = validate });
+                var result = await _mediator.Send(command);
+              
+                return GetResult(new AddFamilyReponseModel() { ResponseCode = (ResponseFamilyErrorEnum)result });
             }
             catch (Exception ex)
             {

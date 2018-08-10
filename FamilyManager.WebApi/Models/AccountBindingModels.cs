@@ -6,7 +6,7 @@ namespace FamilyManager.WebApi.Models
 {
     // Modelos usados como parámetros para las acciones de AccountController.
 
-    public class AddExternalLoginBindingModel
+    public class AddExternalLoginBindingModel 
     {
         [Required]
         [Display(Name = "Token de acceso externo")]

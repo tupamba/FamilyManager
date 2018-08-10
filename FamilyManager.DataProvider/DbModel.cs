@@ -35,7 +35,7 @@ namespace FamilyManager.DataProvider
         public DbSet<CategoryProduct> CategoryProduct { get; set; }
         public DbSet<FamilyCategory> FamilyCategory { get; set; }
 
-        public async Task<IEnumerable<K>> QueryStoreExecute<K>(string query, Dictionary<string, string> paramsList)
+        public IEnumerable<K> QueryStoreExecute<K>(string query, Dictionary<string, string> paramsList)
         {
             if (paramsList?.Count > 0)
             {
@@ -45,7 +45,7 @@ namespace FamilyManager.DataProvider
                     SqlParameter param = new SqlParameter("@" + item.Key, item.Value);
                     sqlparams.Add(param);
                 }
-                return await Database.SqlQuery<K>(query, sqlparams.ToArray()).ToListAsync();
+                return Database.SqlQuery<K>(query, sqlparams.ToArray()).ToList();
             }
             else
                 return null;

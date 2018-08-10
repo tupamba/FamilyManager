@@ -21,10 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyManager.Repository", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyManager.WebApiTests", "FamilyManager.WebApiTests\FamilyManager.WebApiTests.csproj", "{520CF5A1-4F08-48BB-A495-BD5B2A067ECE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyManager.QueryCommand", "FamilyManager.QueryCommand\FamilyManager.QueryCommand.csproj", "{D2B1061E-B99E-40F8-A8F7-7D9C8517B2FC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyManager.QueryObjects", "FamilyManager.QueryObjects\FamilyManager.QueryObjects.csproj", "{3749B5C1-8E9E-40E2-9265-9441F167C563}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,14 +63,6 @@ Global
 		{520CF5A1-4F08-48BB-A495-BD5B2A067ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{520CF5A1-4F08-48BB-A495-BD5B2A067ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{520CF5A1-4F08-48BB-A495-BD5B2A067ECE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2B1061E-B99E-40F8-A8F7-7D9C8517B2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2B1061E-B99E-40F8-A8F7-7D9C8517B2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2B1061E-B99E-40F8-A8F7-7D9C8517B2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2B1061E-B99E-40F8-A8F7-7D9C8517B2FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3749B5C1-8E9E-40E2-9265-9441F167C563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3749B5C1-8E9E-40E2-9265-9441F167C563}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3749B5C1-8E9E-40E2-9265-9441F167C563}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3749B5C1-8E9E-40E2-9265-9441F167C563}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -123,5 +123,12 @@ C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManag
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\obj\Debug\FamilyManager.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\obj\Debug\FamilyManager.WebApi.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\obj\Debug\FamilyManager.WebApi.pdb
-C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\FamilyManager.QueryCommand.dll
-C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\FamilyManager.QueryCommand.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.Integration.Mvc.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.Integration.WebApi.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.Integration.Mvc.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.Integration.WebApi.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.Integration.WebApi.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\MediatR.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\MediatR.Extensions.dll

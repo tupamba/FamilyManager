@@ -11,3 +11,4 @@ C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManag
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\obj\Debug\FamilyManager.QueryCommand.csprojResolveAssemblyReference.cache
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\obj\Debug\FamilyManager.QueryCommand.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\obj\Debug\FamilyManager.QueryCommand.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.QueryCommand\bin\Debug\Mediator.Net.dll

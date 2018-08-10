@@ -442,3 +442,23 @@ System.Data.Entity.Infrastructure.DbUpdateException: Error al guardar entidades 
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 70
+FATAL 2018-08-08 12:21:20,645 99672ms FamilyController       MoveNext           - No handler found for message type FamilyManager.WebApi.Command.AddGroupFamilyCommand
+Mediator.Net.Pipeline.NoHandlerFoundException: No handler found for message type FamilyManager.WebApi.Command.AddGroupFamilyCommand
+   en Mediator.Net.Pipeline.EmptyPipeSpecification`1.OnException(Exception ex, TContext context)
+   en Mediator.Net.Pipeline.GlobalReceivePipe`1.<Connect>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Mediator.Net.Mediator.<SendMessage>d__10`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en Mediator.Net.Mediator.<SendAsync>d__7`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__11.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 84
+FATAL 2018-08-08 13:33:51,303 48364ms FamilyController       MoveNext           - Referencia a objeto no establecida como instancia de un objeto.
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__11.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 100
