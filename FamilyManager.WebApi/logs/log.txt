@@ -462,3 +462,418 @@ Mediator.Net.Pipeline.NoHandlerFoundException: No handler found for message type
 FATAL 2018-08-08 13:33:51,303 48364ms FamilyController       MoveNext           - Referencia a objeto no establecida como instancia de un objeto.
 System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
    en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__11.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 100
+FATAL 2018-08-15 12:28:48,533 54014ms FamilyController       MoveNext           - No se pueden comparar elementos de tipo 'System.Collections.Generic.ICollection`1[[FamilyManager.DataObject.MemberFamily, FamilyManager.DataObject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. Solo se admiten tipos primitivos, tipos de enumeración y tipos de entidad.
+System.NotSupportedException: No se pueden comparar elementos de tipo 'System.Collections.Generic.ICollection`1[[FamilyManager.DataObject.MemberFamily, FamilyManager.DataObject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. Solo se admiten tipos primitivos, tipos de enumeración y tipos de entidad.
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.VerifyTypeSupportedForComparison(Type clrType, TypeUsage edmType, Stack`1 memberPath)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.CreateIsNullExpression(DbExpression operand, Type operandClrType)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.CreateIsNullExpression(ExpressionConverter parent, Expression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NotTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NotEqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConditionalTranslator.TypedTranslate(ExpressionConverter parent, ConditionalExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstPredicateTranslatorBase.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClassc.<GetResultsAsync>b__a()
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.Repository.GroupFamilyRepository.<GetFamilytoUser>d__6.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.Repository\IGroupFamilyRepository.cs:línea 50
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Command.FamilyController.AddGroupFamilyCommandHandler.<Handle>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Command\FamilyController\AddGroupFamilyCommand.cs:línea 48
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 79
+FATAL 2018-08-15 12:31:24,199 28553ms FamilyController       MoveNext           - No se pueden comparar elementos de tipo 'System.Collections.Generic.ICollection`1[[FamilyManager.DataObject.MemberFamily, FamilyManager.DataObject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. Solo se admiten tipos primitivos, tipos de enumeración y tipos de entidad.
+System.NotSupportedException: No se pueden comparar elementos de tipo 'System.Collections.Generic.ICollection`1[[FamilyManager.DataObject.MemberFamily, FamilyManager.DataObject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. Solo se admiten tipos primitivos, tipos de enumeración y tipos de entidad.
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.VerifyTypeSupportedForComparison(Type clrType, TypeUsage edmType, Stack`1 memberPath)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.CreateIsNullExpression(DbExpression operand, Type operandClrType)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.CreateIsNullExpression(ExpressionConverter parent, Expression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NotTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NotEqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConditionalTranslator.TypedTranslate(ExpressionConverter parent, ConditionalExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstPredicateTranslatorBase.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClassc.<GetResultsAsync>b__a()
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.Repository.GroupFamilyRepository.<GetFamilytoUser>d__6.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.Repository\IGroupFamilyRepository.cs:línea 50
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Command.FamilyController.AddGroupFamilyCommandHandler.<Handle>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Command\FamilyController\AddGroupFamilyCommand.cs:línea 48
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 79
+FATAL 2018-08-15 12:32:01,118 65472ms FamilyController       MoveNext           - No se pueden comparar elementos de tipo 'System.Collections.Generic.ICollection`1[[FamilyManager.DataObject.MemberFamily, FamilyManager.DataObject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. Solo se admiten tipos primitivos, tipos de enumeración y tipos de entidad.
+System.NotSupportedException: No se pueden comparar elementos de tipo 'System.Collections.Generic.ICollection`1[[FamilyManager.DataObject.MemberFamily, FamilyManager.DataObject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. Solo se admiten tipos primitivos, tipos de enumeración y tipos de entidad.
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.VerifyTypeSupportedForComparison(Type clrType, TypeUsage edmType, Stack`1 memberPath)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.CreateIsNullExpression(DbExpression operand, Type operandClrType)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.CreateIsNullExpression(ExpressionConverter parent, Expression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NotTranslator.TypedTranslate(ExpressionConverter parent, UnaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NotEqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConditionalTranslator.TypedTranslate(ExpressionConverter parent, ConditionalExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstPredicateTranslatorBase.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClassc.<GetResultsAsync>b__a()
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.Repository.GroupFamilyRepository.<GetFamilytoUser>d__6.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.Repository\IGroupFamilyRepository.cs:línea 50
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Command.FamilyController.AddGroupFamilyCommandHandler.<Handle>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Command\FamilyController\AddGroupFamilyCommand.cs:línea 48
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 79
+FATAL 2018-08-15 12:34:18,201 34696ms FamilyController       MoveNext           - Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles.
+System.Data.Entity.Infrastructure.DbUpdateException: Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles. ---> System.Data.Entity.Core.UpdateException: No se puede determinar una ordenación válida para operaciones dependientes. Pueden existir dependencias debidas a restricciones de clave externa, requisitos del modelo o valores generados por el almacenamiento.
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.DependencyOrderingError(IEnumerable`1 remainder)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Command.FamilyController.AddGroupFamilyCommandHandler.<Handle>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Command\FamilyController\AddGroupFamilyCommand.cs:línea 54
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 79
+FATAL 2018-08-15 12:36:25,441 161937ms FamilyController       MoveNext           - Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles.
+System.Data.Entity.Infrastructure.DbUpdateException: Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles. ---> System.Data.Entity.Core.UpdateException: No se puede determinar una ordenación válida para operaciones dependientes. Pueden existir dependencias debidas a restricciones de clave externa, requisitos del modelo o valores generados por el almacenamiento.
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.DependencyOrderingError(IEnumerable`1 remainder)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Command.FamilyController.AddGroupFamilyCommandHandler.<Handle>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Command\FamilyController\AddGroupFamilyCommand.cs:línea 54
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 79
+FATAL 2018-08-15 12:45:58,326 50029ms FamilyController       MoveNext           - Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles.
+System.Data.Entity.Infrastructure.DbUpdateException: Error al guardar entidades que no exponen propiedades de clave externa para sus relaciones. La propiedad EntityEntries devolverá NULL porque no se puede identificar una sola entidad como el origen de la excepción. Para facilitar el control de excepciones durante las operaciones de guardado, exponga las propiedades de clave externa en los tipos de entidad. Vea la InnerException para obtener detalles. ---> System.Data.Entity.Core.UpdateException: No se puede determinar una ordenación válida para operaciones dependientes. Pueden existir dependencias debidas a restricciones de clave externa, requisitos del modelo o valores generados por el almacenamiento.
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.DependencyOrderingError(IEnumerable`1 remainder)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en FamilyManager.Repository.GroupFamilyRepository.<AddGroupFamily>d__4.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.Repository\IGroupFamilyRepository.cs:línea 43
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Command.FamilyController.AddGroupFamilyCommandHandler.<Handle>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Command\FamilyController\AddGroupFamilyCommand.cs:línea 53
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 79
+FATAL 2018-08-15 13:12:35,079 55864ms FamilyController       MoveNext           - No se puede crear un valor de constante de tipo 'FamilyManager.DataObject.MemberFamily'. Solo se admiten tipos primitivos o tipos de enumeración en este contexto.
+System.NotSupportedException: No se puede crear un valor de constante de tipo 'FamilyManager.DataObject.MemberFamily'. Solo se admiten tipos primitivos o tipos de enumeración en este contexto.
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NewArrayInitTranslator.<>c__DisplayClassa7.<TypedTranslate>b__a5(Expression e)
+   en System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   en System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal.EnumerableValidator`3.Validate(IEnumerable`1 argument, String argumentName, Int32 expectedElementCount, Boolean allowEmpty, Func`3 map, Func`2 collect, Func`3 deriveName)
+   en System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal.EnumerableValidator`3.Validate()
+   en System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.CreateExpressionList(IEnumerable`1 arguments, String argumentName, Boolean allowEmpty, Action`2 validationCallback)
+   en System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.CreateNewCollection(IEnumerable`1 elements)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NewArrayInitTranslator.TypedTranslate(ExpressionConverter parent, NewArrayExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstPredicateTranslatorBase.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClassc.<GetResultsAsync>b__a()
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.Repository.GroupFamilyRepository.<AddGroupFamily>d__4.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.Repository\IGroupFamilyRepository.cs:línea 36
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Command.FamilyController.AddGroupFamilyCommandHandler.<Handle>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Command\FamilyController\AddGroupFamilyCommand.cs:línea 55
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 79
+FATAL 2018-08-15 13:13:17,927 98712ms FamilyController       MoveNext           - No se puede crear un valor de constante de tipo 'FamilyManager.DataObject.MemberFamily'. Solo se admiten tipos primitivos o tipos de enumeración en este contexto.
+System.NotSupportedException: No se puede crear un valor de constante de tipo 'FamilyManager.DataObject.MemberFamily'. Solo se admiten tipos primitivos o tipos de enumeración en este contexto.
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NewArrayInitTranslator.<>c__DisplayClassa7.<TypedTranslate>b__a5(Expression e)
+   en System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   en System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal.EnumerableValidator`3.Validate(IEnumerable`1 argument, String argumentName, Int32 expectedElementCount, Boolean allowEmpty, Func`3 map, Func`2 collect, Func`3 deriveName)
+   en System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal.EnumerableValidator`3.Validate()
+   en System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal.ArgumentValidation.CreateExpressionList(IEnumerable`1 arguments, String argumentName, Boolean allowEmpty, Action`2 validationCallback)
+   en System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.CreateNewCollection(IEnumerable`1 elements)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.NewArrayInitTranslator.TypedTranslate(ExpressionConverter parent, NewArrayExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.ConstantTranslator.TypedTranslate(ExpressionConverter parent, ConstantExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.FirstPredicateTranslatorBase.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClassc.<GetResultsAsync>b__a()
+   en System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<GetResultsAsync>d__e.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   en System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.Repository.GroupFamilyRepository.<AddGroupFamily>d__4.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.Repository\IGroupFamilyRepository.cs:línea 36
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Command.FamilyController.AddGroupFamilyCommandHandler.<Handle>d__3.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Command\FamilyController\AddGroupFamilyCommand.cs:línea 55
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en FamilyManager.WebApi.Controllers.FamilyController.<AddFamily>d__10.MoveNext() en C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\Controllers\FamilyController.cs:línea 79

@@ -8,7 +8,7 @@ namespace FamilyManager.WebApi.Models
 {
     public class ResponseModel
     {
-        private ResponseFamilyErrorEnum responseCode;
+        private ResponseFamilyErrorEnum responseCode = ResponseFamilyErrorEnum.Ok;
 
         public ResponseFamilyErrorEnum ResponseCode
         {
@@ -28,20 +28,23 @@ namespace FamilyManager.WebApi.Models
                     return "User alredy exist";
                 case ResponseFamilyErrorEnum.FamilyNameNotExist:
                     return "Family name not exist";
+                case ResponseFamilyErrorEnum.UserFamilyAlredyExist:
+                    return "User family alredy exist";
                 default:
                     return "";
             }
         }
         public virtual string GetPropertyError(ResponseFamilyErrorEnum code)
         {
-            switch (code)
-            {
-                case ResponseFamilyErrorEnum.UserAlredyExist:
-                case ResponseFamilyErrorEnum.FamilyNameDuplicate:
-                    return "FamilyName";
-                default:
-                    return "";
-            }
+            return ((int)code).ToString();
+            //switch (code)
+            //{
+            //    case ResponseFamilyErrorEnum.UserAlredyExist:
+            //    case ResponseFamilyErrorEnum.FamilyNameDuplicate:
+            //        return "FamilyName";
+            //    default:
+            //        return "";
+            //}
         }
     }
    

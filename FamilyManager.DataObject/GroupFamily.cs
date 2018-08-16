@@ -14,18 +14,14 @@ namespace FamilyManager.DataObject
         [MaxLength(200)]
         [Index("IX_Name", 1, IsUnique = true)]
         public string Name { get; set; }
-        [ForeignKey("Owner")]
-        public long? Owner_Id { get; set; }
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<MemberFamily> MembersFamily { get; set; }
         public GroupFamily() { }
-        public MemberFamily Owner { get; set; }
         public DateTime CreateDate { get; set; } = DateTime.Now;
-        public GroupFamily(List<MemberFamily> members, string name, MemberFamily owner)
+        public GroupFamily(List<MemberFamily> members, string name)
         {
             MembersFamily = members;
             Name = name;
-            Owner = owner;
         }
 
         public void Dispose()
@@ -38,10 +34,12 @@ namespace FamilyManager.DataObject
         [MaxLength(500)]
         [Index("IX_UserName", 1, IsUnique = true)]
         public string UserName { get; set; }
+        public bool Owner { get; set; }
         public MemberFamily() { }
-        public MemberFamily(string name)
+        public MemberFamily(string name, bool owner)
         {
             UserName = name;
+            Owner = owner;
         }
 
         public void Dispose()

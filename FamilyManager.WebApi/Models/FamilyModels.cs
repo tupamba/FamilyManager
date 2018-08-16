@@ -47,12 +47,12 @@ namespace FamilyManager.WebApi.Models
         {
             try
             {
-                var member = await memberdb.FindByConditionAync(x => x.UserName == user);
-                var userMember = member.DefaultIfEmpty(new MemberFamily(user)).FirstOrDefault();
-                modelFamily.Create(
-                            new GroupFamily(new List<MemberFamily>()
-                            { userMember
-                            }, FamilyName, userMember));
+                //var member = await memberdb.FindByConditionAync(x => x.UserName == user);
+                //var userMember = member.DefaultIfEmpty(new MemberFamily(user)).FirstOrDefault();
+                //modelFamily.Create(
+                //            new GroupFamily(new List<MemberFamily>()
+                //            { userMember
+                //            }, FamilyName, userMember));
                 var result = await modelFamily.SaveAsync();
                 if (result != 0)
                     return ResponseFamilyErrorEnum.Ok;
@@ -66,20 +66,20 @@ namespace FamilyManager.WebApi.Models
             }
 
         }
-        public async Task<ResponseFamilyErrorEnum> InsertFamily(DbModel modelFamily, string user)
-        {
-            var member = modelFamily.MemberFamily.FirstOrDefault(x => x.UserName == user);
-            var userMember = member == null ? new MemberFamily(user) : member;
-            modelFamily.GroupFamily.Add(
-                        new GroupFamily(new List<MemberFamily>()
-                        { userMember
-                        }, FamilyName, userMember));
-            var result = await modelFamily.SaveChangesAsync();
-            if (result != 0)
-                return ResponseFamilyErrorEnum.Ok;
-            else
-                return ResponseFamilyErrorEnum.Error;
-        }
+        //public async Task<ResponseFamilyErrorEnum> InsertFamily(DbModel modelFamily, string user)
+        //{
+        //    var member = modelFamily.MemberFamily.FirstOrDefault(x => x.UserName == user);
+        //    var userMember = member == null ? new MemberFamily(user) : member;
+        //    modelFamily.GroupFamily.Add(
+        //                new GroupFamily(new List<MemberFamily>()
+        //                { userMember
+        //                }, FamilyName, userMember));
+        //    var result = await modelFamily.SaveChangesAsync();
+        //    if (result != 0)
+        //        return ResponseFamilyErrorEnum.Ok;
+        //    else
+        //        return ResponseFamilyErrorEnum.Error;
+        //}
 
         //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         //{
@@ -93,11 +93,11 @@ namespace FamilyManager.WebApi.Models
         [Required(ErrorMessage = "Nombre es un dato obligatorio")]
         public string FamilyName { get; set; }
 
-        public GroupFamily ValidateFamily(DbModel modelFamily, string user)
-        {
-            var result = modelFamily.GroupFamily.FirstOrDefault(x => x.Owner.UserName == user);
-            return result;
-        }
+        //public GroupFamily ValidateFamily(DbModel modelFamily, string user)
+        //{
+        //    var result = modelFamily.GroupFamily.FirstOrDefault(x => x.Owner.UserName == user);
+        //    return result;
+        //}
         public async Task<ResponseFamilyErrorEnum> MofifyFamily(DbModel modelFamily, GroupFamily family)
         {
             var result = await modelFamily.SaveChangesAsync();
@@ -126,7 +126,7 @@ namespace FamilyManager.WebApi.Models
         {
             var userModel = modelFamily.MemberFamily.FirstOrDefault(x => x.UserName == user);
             modelFamily.GroupFamily.FirstOrDefault(x => x.Name == familyName)?.MembersFamily.Add
-                (userModel == null?new MemberFamily(user): userModel);
+                (userModel == null?new MemberFamily(user, false): userModel);
             var result = await modelFamily.SaveChangesAsync();
             if (result != 0)
                 return ResponseFamilyErrorEnum.Ok;
@@ -139,7 +139,7 @@ namespace FamilyManager.WebApi.Models
     {
         public MemberFamily ValidateFamily(DbModel modelFamily, string user)
         {
-            var result = modelFamily.GroupFamily.Any(x => x.Owner.UserName == user || !x.MembersFamily.Any(y => y.UserName == user));
+            var result = modelFamily.GroupFamily.Any(x => x.Name == user || !x.MembersFamily.Any(y => y.UserName == user));
             if (result)
                 return null;
             else
@@ -164,7 +164,7 @@ namespace FamilyManager.WebApi.Models
         public string Email { get; set; }
         public GroupFamily ValidateFamily(DbModel modelFamily, string user)
         {
-            var result = modelFamily.GroupFamily.FirstOrDefault(x => x.Owner.UserName == user);
+            var result = modelFamily.GroupFamily.FirstOrDefault(x => x.Name == user);
             return result;
         }
         public void SendtoMail(string tosend, string family)
@@ -245,6 +245,8 @@ namespace FamilyManager.WebApi.Models
         UserOwnerFamilyAlredyExist,
         FamilyNameDuplicate,
         UserAlredyExist,
-        FamilyNameNotExist
+        FamilyNameNotExist,
+        UserFamilyAlredyExist,
+        Excpetion
     }
 }

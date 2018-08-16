@@ -18,7 +18,7 @@ namespace FamilyManager.WebApi.QueryObject
         }
         public async Task<GroupFamily> GetforOwnerUser(string user)
         {
-            return await model.GroupFamily.FirstOrDefaultAsync(x => x.Owner.UserName == user);
+            return await model.GroupFamily.FirstOrDefaultAsync(x => x.Name == user);
         }
     }
 }

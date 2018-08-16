@@ -40,8 +40,7 @@ namespace FamilyManager.WebApi
 
             builder.RegisterControllers(typeof(WebApiApplication).Assembly);
             builder.RegisterApiControllers(typeof(WebApiApplication).Assembly);
-
-            builder.RegisterType(typeof(DbModel)).As(typeof(DbContext)).InstancePerLifetimeScope();
+            builder.RegisterType<DbModel>().InstancePerRequest();
             builder.RegisterType<GroupFamilyRepository>().AsImplementedInterfaces();
             builder.RegisterType<QueryFactory>().AsImplementedInterfaces();
             
