@@ -25,9 +25,11 @@ namespace FamilyManager.WebApi.Command.FamilyController
     public class NameModifyGroupFamilyCommandCommandHandler : IRequestHandler<NameModifyGroupFamilyCommand, ResponseFamilyErrorEnum>, IDisposable
     {
         private readonly IGroupFamilyRepository _respository;
-        public NameModifyGroupFamilyCommandCommandHandler(IGroupFamilyRepository respo)
+        private readonly IUnitOfWork _unitOfWork;
+        public NameModifyGroupFamilyCommandCommandHandler(IGroupFamilyRepository respo, IUnitOfWork unitOfWork)
         {
             _respository = respo;
+            _unitOfWork = unitOfWork;
         }
 
         public void Dispose()
@@ -44,7 +46,7 @@ namespace FamilyManager.WebApi.Command.FamilyController
             else
             {
                 family.Name = request.Name;
-                var res = await _respository.UnitOfWork.SaveChangesAsync();
+                var res = await _unitOfWork.Commit();
                 return res > 0 ? ResponseFamilyErrorEnum.Ok : ResponseFamilyErrorEnum.Error;
             }
         }

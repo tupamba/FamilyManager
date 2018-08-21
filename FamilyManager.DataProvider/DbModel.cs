@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace FamilyManager.DataProvider
 {
-    public interface IUnitOfWork
-    {
-        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
-        int SaveChanges();
-    }
-    public class DbModel : DbContext, IUnitOfWork
+    //public interface IUnitOfWork
+    //{
+    //    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
+    //    int SaveChanges();
+    //}
+    public class DbModel : DbContext//, IUnitOfWork
     {
         public DbModel()
            : base("DefaultConnection")
@@ -28,12 +28,12 @@ namespace FamilyManager.DataProvider
             modelBuilder.Entity<GroupFamily>()
                         .MapToStoredProcedures();
         }
-        public DbSet<MemberFamily> MemberFamily { get; set; }
-        public DbSet<GroupFamily> GroupFamily { get; set; }
-        public DbSet<Ticket> Ticket { get; set; }
-        public DbSet<Product> Product { get; set; }
-        public DbSet<CategoryProduct> CategoryProduct { get; set; }
-        public DbSet<FamilyCategory> FamilyCategory { get; set; }
+        public virtual DbSet<MemberFamily> MemberFamily { get; set; }
+        public virtual DbSet<GroupFamily> GroupFamily { get; set; }
+        public virtual DbSet<Ticket> Ticket { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<CategoryProduct> CategoryProduct { get; set; }
+        public virtual DbSet<FamilyCategory> FamilyCategory { get; set; }
 
         public IEnumerable<K> QueryStoreExecute<K>(string query, Dictionary<string, string> paramsList)
         {

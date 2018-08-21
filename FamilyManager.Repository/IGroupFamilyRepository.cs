@@ -10,10 +10,73 @@ using System.Data.Entity;
 
 namespace FamilyManager.Repository
 {
+    public interface IUnitOfWork : IDisposable
+    {
+
+        /// <summary>
+        /// Saves all pending changes
+        /// </summary>
+        /// <returns>The number of objects in an Added, Modified, or Deleted state</returns>
+        Task<int> Commit();
+    }
+    public sealed class UnitOfWork : IUnitOfWork
+    {
+        /// <summary>
+        /// The DbContext
+        /// </summary>
+        private DbContext _dbContext;
+
+        /// <summary>
+        /// Initializes a new instance of the UnitOfWork class.
+        /// </summary>
+        /// <param name="context">The object context</param>
+        public UnitOfWork(DbContext context)
+        {
+
+            _dbContext = context;
+        }
+
+
+
+        /// <summary>
+        /// Saves all pending changes
+        /// </summary>
+        /// <returns>The number of objects in an Added, Modified, or Deleted state</returns>
+        public Task<int> Commit()
+        {
+            // Save changes with the default options
+            return _dbContext.SaveChangesAsync();
+        }
+
+        /// <summary>
+        /// Disposes the current object
+        /// </summary>
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        /// Disposes all external resources.
+        /// </summary>
+        /// <param name="disposing">The dispose indicator.</param>
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (_dbContext != null)
+                {
+                    _dbContext.Dispose();
+                    _dbContext = null;
+                }
+            }
+        }
+    }
     public interface IGroupFamilyRepository: IDisposable
     {
         Task<GroupFamily> AddGroupFamily(GroupFamily family);
-        IUnitOfWork UnitOfWork { get; }
+      //  IUnitOfWork UnitOfWork { get; }
         IEnumerable<K> QueryStoreExecute<K>(string query, Dictionary<string, string> paramsList);
         Task<GroupFamily> GetFamily(string name);
         Task<GroupFamily> GetFamilytoUser(string userName);
@@ -27,10 +90,10 @@ namespace FamilyManager.Repository
         {
             db = context;
         }
-        public IUnitOfWork UnitOfWork
-        {
-            get { return db; }
-        }
+        //public IUnitOfWork UnitOfWork
+        //{
+        //    get { return db; }
+        //}
         public async Task<GroupFamily> AddGroupFamily(GroupFamily family)
         {
             var member = family.MembersFamily.FirstOrDefault();
@@ -51,7 +114,7 @@ namespace FamilyManager.Repository
         public async Task<GroupFamily> GetFamilytoUser(string userName)
         {
             return await db.GroupFamily.Include("MembersFamily").
-                FirstOrDefaultAsync(x => x.MembersFamily.Any(k => k.UserName == userName));
+                FirstOrDefaultAsync(x => x.MembersFamily != null? x.MembersFamily.Any(k => k.UserName == userName):false);
         }
         public async Task<GroupFamily> GetFamilytoOwner(string ownerName)
         {

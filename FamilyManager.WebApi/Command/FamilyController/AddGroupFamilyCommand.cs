@@ -25,9 +25,11 @@ namespace FamilyManager.WebApi.Command.FamilyController
     public class AddGroupFamilyCommandHandler : IRequestHandler<AddGroupFamilyCommand, ResponseFamilyErrorEnum>, IDisposable
     {
         private readonly IGroupFamilyRepository _respository;
-        public AddGroupFamilyCommandHandler(IGroupFamilyRepository respo)
+        private readonly IUnitOfWork _unitOfWork;
+        public AddGroupFamilyCommandHandler(IGroupFamilyRepository respo, IUnitOfWork unitOfWork)
         {
             _respository = respo;
+            _unitOfWork = unitOfWork;
         }
 
         public void Dispose()
@@ -52,8 +54,8 @@ namespace FamilyManager.WebApi.Command.FamilyController
                 var member = new MemberFamily(request.UserName, true);
                 request.GroupFamily.MembersFamily = new List<MemberFamily>()
                 { member}; 
-                await _respository.AddGroupFamily(request.GroupFamily);
-                var res = await _respository.UnitOfWork.SaveChangesAsync();
+                var add = await _respository.AddGroupFamily(request.GroupFamily);
+                var res = await _unitOfWork.Commit();
                 return res > 0 ? ResponseFamilyErrorEnum.Ok : ResponseFamilyErrorEnum.Error;
             }
         }

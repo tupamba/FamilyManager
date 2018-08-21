@@ -35,13 +35,13 @@ namespace FamilyManager.WebApi.Models
                 if (_value == null || _value.ModelState == ResponseFamilyErrorEnum.Excpetion)
                     response = _request.CreateResponse(HttpStatusCode.InternalServerError);
                 else if (_value.ModelState == ResponseFamilyErrorEnum.Ok)
-                    response = _request.CreateResponse(HttpStatusCode.BadRequest, _value);
+                    response = _request.CreateResponse(HttpStatusCode.OK,_value);
                 else
                     response = _request.CreateResponse(HttpStatusCode.BadRequest, _value);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                response = _request.CreateResponse(HttpStatusCode.InternalServerError);
+                response = _request.CreateResponse(HttpStatusCode.InternalServerError,ex.Message);
             }
             return Task.FromResult(response);
         }
