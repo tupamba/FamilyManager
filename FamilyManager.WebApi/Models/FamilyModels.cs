@@ -183,10 +183,10 @@ namespace FamilyManager.WebApi.Models
     #region Response
     public class AddFamilyReponseModel : ResponseModel
     {
-        public override string GetMessagge(ResponseFamilyErrorEnum code)
-        {
-            return GetMessaggeError(code);
-        }
+        //public override string GetMessagge(ResponseFamilyErrorEnum code)
+        //{
+        //    return GetMessaggeError(code);
+        //}
         public string GetPropertyError(int error)
         {
             switch (error)

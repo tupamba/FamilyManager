@@ -105,3 +105,4 @@ C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManag
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApiTests\bin\Debug\Autofac.Integration.Mvc.xml
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApiTests\bin\Debug\Autofac.Integration.WebApi.pdb
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApiTests\bin\Debug\Autofac.Integration.WebApi.xml
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApiTests\bin\Debug\es\System.Web.Http.resources.dll

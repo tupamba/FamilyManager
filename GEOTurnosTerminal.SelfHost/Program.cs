@@ -1,7 +1,10 @@
-﻿using FamilyManager.WebSite;
+﻿using FamilyManager.WebApi;
+using Microsoft.Owin.Hosting;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Topshelf;
@@ -12,30 +15,29 @@ namespace FamilyManager.SelfHost
     {
         static void Main(string[] args)
         {
-            HostFactory.Run(factory =>
+            const string baseAddress = "http://localhost:9123/";
+
+            // This starts the OWIN host using the application startup
+            // logic in the Startup class. See Startup for the example of
+            // how to set up OWIN Web API.
+            using (WebApp.Start<StartupAutofac>(baseAddress))
             {
-                // Provide the service's behavior using our custom
-                //  ServiceHost class
-                //
-                factory.Service<IServiceHost>(service =>
-                {
-                    service.ConstructUsing(name => ServiceHostCreator.GetServiceHost(ServiceHostEnum.ServiceHost));
-                    service.WhenStarted(sh => sh.Start());
-                    service.WhenShutdown(sh => sh.Shutdown());
-                    service.WhenStopped(sh => sh.Stop());
-                }); 
+                // On startup this app will make a request to the self-hosted
+                // Web API service. You should see logging statements and results
+                // dumped to the console window.
+                var client = new HttpClient();
+                var response = client.GetAsync(baseAddress + "api/Family/GetFamily").Result;
 
-                // Now define some attributes of the service overall
-                //
-                factory.RunAsLocalSystem();
+                Console.WriteLine(response);
+                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                Console.ReadLine();
+            }
 
-                // Provide the metadata to the service control
-                //
-                factory.SetServiceName("self-hosted-angular2-service");
-                factory.SetDisplayName("Self-hosted Angular 2 service");
-                factory.SetDescription("A custom service that hosts an Angular 2 website using OWIN");
-
-            });
+            if (Debugger.IsAttached)
+            {
+                Console.WriteLine("Press any key to exit.");
+                Console.ReadLine();
+            }
         }
     }
 }

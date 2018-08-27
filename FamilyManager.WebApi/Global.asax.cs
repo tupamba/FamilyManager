@@ -42,6 +42,7 @@ namespace FamilyManager.WebApi
             builder.RegisterApiControllers(typeof(WebApiApplication).Assembly);
             builder.RegisterType<DbModel>().InstancePerRequest();
             builder.RegisterType<GroupFamilyRepository>().AsImplementedInterfaces();
+            builder.RegisterType<UnitOfWork>().AsImplementedInterfaces();
             builder.RegisterType<QueryFactory>().AsImplementedInterfaces();
             
             builder

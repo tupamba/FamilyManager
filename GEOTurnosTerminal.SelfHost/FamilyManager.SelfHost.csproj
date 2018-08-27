@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FamilyManager.SelfHost</RootNamespace>
     <AssemblyName>FamilyManager.SelfHost</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <SccProjectName>SAK</SccProjectName>
@@ -31,6 +31,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -126,9 +127,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GEOTurnosTerminal.WebSite\FamilyManager.WebSite.csproj">
-      <Project>{9BD6270C-31B9-41E5-82A9-0D3CE95BE24F}</Project>
-      <Name>FamilyManager.WebSite</Name>
+    <ProjectReference Include="..\FamilyManager.WebApi\FamilyManager.WebApi.csproj">
+      <Project>{9306dea7-a22c-402c-a6de-17c8e4c1c700}</Project>
+      <Name>FamilyManager.WebApi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

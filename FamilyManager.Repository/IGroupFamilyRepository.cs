@@ -30,7 +30,7 @@ namespace FamilyManager.Repository
         /// Initializes a new instance of the UnitOfWork class.
         /// </summary>
         /// <param name="context">The object context</param>
-        public UnitOfWork(DbContext context)
+        public UnitOfWork(DbModel context)
         {
 
             _dbContext = context;
@@ -114,7 +114,7 @@ namespace FamilyManager.Repository
         public async Task<GroupFamily> GetFamilytoUser(string userName)
         {
             return await db.GroupFamily.Include("MembersFamily").
-                FirstOrDefaultAsync(x => x.MembersFamily != null? x.MembersFamily.Any(k => k.UserName == userName):false);
+                FirstOrDefaultAsync(x => x.MembersFamily.Any(k => k.UserName == userName));
         }
         public async Task<GroupFamily> GetFamilytoOwner(string ownerName)
         {

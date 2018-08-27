@@ -47,7 +47,7 @@ namespace FamilyManager.WebApi.Command.FamilyController
             {
                 family.Name = request.Name;
                 var res = await _unitOfWork.Commit();
-                return res > 0 ? ResponseFamilyErrorEnum.Ok : ResponseFamilyErrorEnum.Error;
+                return ResponseFamilyErrorEnum.Ok;
             }
         }
     }
