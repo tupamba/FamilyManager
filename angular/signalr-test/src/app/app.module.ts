@@ -6,12 +6,12 @@ import { FormsModule }   from '@angular/forms';
 
 import { map } from 'rxjs/operators';
 
-import { ChannelService, ChannelConfig, SignalrWindow } from './service/channel.service';
+//import { ChannelService, ChannelConfig, SignalrWindow } from './service/channel.service';
 
 import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
 import { AppConfig } from './service/app.config.service';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing';
 import { AuthGuard } from './service/_guards/auth.guard.service';
 import { AuthenticationService } from './service/authentication.service';
 import { UserService } from './service/user.service';
@@ -20,38 +20,43 @@ import { LoginComponent } from './profile/login/login.component';
 import { RegisterComponent } from './profile/register/register.component';
 import { EqualValidator } from './validators/validators';
 import { GlobalService } from './service/global.service';
-import { GroupFamilyModule } from './groupFamily/groupFamily.module';
+import { PageModule } from './pages/page.module';
+import { TranslatePipe } from './pipe/lang/translate.pipe';
+import { TranslateService } from './service/lang/translate.service';
 
 
-let channelConfig = new ChannelConfig();  
-channelConfig.url = "http://localhost:7331/signalr";  
-channelConfig.hubName = "EventHub";
+
+// let channelConfig = new ChannelConfig();  
+// channelConfig.url = "http://localhost:7331/signalr";  
+// channelConfig.hubName = "EventHub";
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     LoginComponent,
     RegisterComponent,
-    EqualValidator
+    EqualValidator,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
     HttpModule,
     ReactiveFormsModule,
     FormsModule,
-    routing,
-    GroupFamilyModule
+    PageModule,
+    AppRoutingModule
   ],
   providers: [
     AppConfig,
-    ChannelService,
+   // ChannelService,
     AuthGuard,
     AuthenticationService,
     UserService,
     AlertService,
     GlobalService,
-    { provide: SignalrWindow, useValue: window },
-    { provide: 'channel.config', useValue: channelConfig }
+    TranslateService
+    // { provide: SignalrWindow, useValue: window },
+    // { provide: 'channel.config', useValue: channelConfig }
   ],
   bootstrap: [AppComponent]
 })
