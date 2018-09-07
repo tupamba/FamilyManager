@@ -11,9 +11,9 @@ namespace FamilyManager.WebApi.Controllers
 {
     public class ControllerBase : ApiController
     {
-        public static IHttpActionResult GetResult(ResponseModel result, HttpRequestMessage request)
+        public static IHttpActionResult GetResult(ResponseModel result, HttpRequestMessage request, object data = null)
         {
-            return ModelResult.GetResult(result.Messagge, result.ResponseCode, request);
+            return ModelResult.GetResult(result.Messagge, result.ResponseCode, request, result);
         }
     }
 }

@@ -52,7 +52,7 @@ namespace FamilyManager.WebApi.Controllers
         {
             try
             {           
-                var result = await _factoryQuery.GetGroupFamilyQuery().GetforOwnerUser(RequestContext.Principal.Identity.Name);
+                var result = await _factoryQuery.GetGroupFamilyQuery().GetFamilyUser(RequestContext.Principal.Identity.Name);
                 return GetResult(new GetFamilyReponseModel() {FamilyName = result?.Name});
             }
             catch (Exception ex)

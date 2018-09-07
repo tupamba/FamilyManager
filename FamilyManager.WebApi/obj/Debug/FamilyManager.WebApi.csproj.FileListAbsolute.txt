@@ -1,4 +1,3 @@
-C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\obj\Debug\FamilyManager.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\ApplicationInsights.config
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\roslyn\csc.exe
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -68,6 +67,7 @@ C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManag
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\FamilyManager.DataObject.pdb
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\FamilyManager.DataProvider.pdb
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\FamilyManager.Repository.pdb
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Antlr3.Runtime.pdb
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.xml
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.Integration.Mvc.xml
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Autofac.Integration.WebApi.pdb
@@ -95,7 +95,6 @@ C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManag
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\System.Web.WebPages.xml
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\System.Web.WebPages.Razor.xml
-C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Antlr3.Runtime.pdb
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\EntityFramework.xml
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\EntityFramework.SqlServer.xml
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
@@ -115,7 +114,6 @@ C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManag
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\System.Web.Http.WebHost.resources.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\System.Web.Optimization.resources.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\System.Web.Razor.resources.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\System.Web.WebPages.Deployment.resources.dll
@@ -130,5 +128,6 @@ C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManag
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\bin\es\System.Web.Http.Owin.resources.dll
+C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\obj\Debug\FamilyManager.WebApi.csprojResolveAssemblyReference.cache
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\obj\Debug\FamilyManager.WebApi.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.WebApi\obj\Debug\FamilyManager.WebApi.pdb

@@ -16,6 +16,7 @@ namespace FamilyManager.WebApi.Models
             set {  responseCode = value; Messagge = GetMessagge(responseCode); }
         }
         public string Messagge { get; set; }
+
         public virtual string GetMessagge(ResponseFamilyErrorEnum code)
         {
             switch (code)

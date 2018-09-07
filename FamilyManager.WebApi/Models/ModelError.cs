@@ -50,12 +50,14 @@ namespace FamilyManager.WebApi.Models
     {
         public string Message { get; set; }
         public ResponseFamilyErrorEnum ModelState { get; set; }
-        public static ActionResult GetResult(string message, ResponseFamilyErrorEnum codeResult,HttpRequestMessage request)
+        public object Data { get; set; }
+        public static ActionResult GetResult(string message, ResponseFamilyErrorEnum codeResult,HttpRequestMessage request, object data)
         {
             var result = new ModelResult()
             {
                 Message = message,
-                ModelState = codeResult
+                ModelState = codeResult,
+                Data = data
             };
 
             return new ActionResult(result, request);

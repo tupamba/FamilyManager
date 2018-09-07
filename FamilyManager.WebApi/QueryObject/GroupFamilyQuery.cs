@@ -20,5 +20,10 @@ namespace FamilyManager.WebApi.QueryObject
         {
             return await model.GroupFamily.FirstOrDefaultAsync(x => x.Name == user);
         }
+        public async Task<GroupFamily> GetFamilyUser(string user)
+        {
+            return await model.GroupFamily.Include("MembersFamily").
+                FirstOrDefaultAsync(x => x.MembersFamily.Any(k => k.UserName == user));
+        }
     }
 }

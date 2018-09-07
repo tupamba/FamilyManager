@@ -10,6 +10,7 @@ import { ConfirmInvitationComponent } from './groupFamily/confirm-invitation/con
 import { HeaderComponent } from '../shared/header/header.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar/sidebar.component';
 import { BreadcrumsComponent } from '../shared/breadcrums/breadcrums/breadcrums.component';
+import { ProfileComponent } from './profile/profile/profile.component';
 
 @NgModule({
     declarations:[
@@ -18,7 +19,8 @@ import { BreadcrumsComponent } from '../shared/breadcrums/breadcrums/breadcrums.
         AlertComponent,
         HeaderComponent,
         SidebarComponent,
-        BreadcrumsComponent
+        BreadcrumsComponent,
+        ProfileComponent
     ],
     exports:[
         ConfirmInvitationComponent,
