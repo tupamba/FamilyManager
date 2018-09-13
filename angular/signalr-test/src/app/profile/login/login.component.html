@@ -1,30 +1,5 @@
 <alert></alert>
-<!-- <div class="col-md-6 col-md-offset-3">
-    <h2>Bienvenido</h2>
-    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
-        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
-            <label for="username">Nombre de usuario</label>
-            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="model.username" #username="ngModel" required
-            />
-            <div *ngIf="f.submitted && !username.valid" class="help-block">Usuario requerido</div>
-        </div>
-        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
-            <label for="password">Contraseña</label>
-            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
-            <div *ngIf="f.submitted && !password.valid" class="help-block">Contraseña requerida</div>
-        </div>
-        <div class="form-group">
-            <button [disabled]="loading" class="btn btn-primary">Siguiente</button>
-            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
-            />
-            <a [routerLink]="['/register']" class="btn btn-link">Perdí mi contraseña</a>
-        </div>
-        <div>
-            <a [routerLink]="['/register']" class="btn btn-secondary">Registrarme</a>
-        </div>
-    </form>
-</div> -->
-
+<!-- ngNativeValidate -->
 <section id="wrapper" class="login-register login-sidebar" style="background-image:url(../assets/images/background/login-register.jpg);">
     <div class="login-box card">
         <div class="card-body">
@@ -32,21 +7,22 @@
                 <a href="javascript:void(0)" class="text-center db"><img src="../assets/images/logo-icon.png" alt="Home" /><br/><img src="../assets/images/logo-text.png" alt="Home" /></a>
                 <div class="form-group m-t-40">
                     <div class="col-xs-12">
-                        <input class="form-control" type="text" placeholder="{{ 'Username' | translate }}" id="username" name="username" [(ngModel)]="model.username" #username="ngModel" required>
-                        <div *ngIf="f.submitted && !username.valid" class="help-block">Usuario requerido</div>
+                        <input class="form-control" type="text" placeholder="{{ 'Username' | translate }}" id="username" name="username" [(ngModel)]="model.username" 
+                        #username="ngModel" required>
+                        <div *ngIf="f.submitted && !username.valid" class="help-block error">Usuario requerido</div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12">
                         <input class="form-control" type="password" placeholder="{{ 'Password' | translate }} "  name="password" [(ngModel)]="model.password" #password="ngModel" required>
-                        <div *ngIf="f.submitted && !password.valid" class="help-block">Contraseña requerida</div>
+                        <div *ngIf="f.submitted && !password.valid" class="help-block error">Contraseña requerida</div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-md-12">
                         <div class="checkbox checkbox-primary pull-left p-t-0">
                             <input id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
-                            <label for="checkbox-signup"> {{ 'Remember me' | translate }}  </label>
+                            <label for="checkbox-signup">{{ 'Remember me' | translate }}</label>
                         </div>
                         <a [routerLink]="['/register']" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i>{{ 'Forgot pwd?' | translate }} </a> </div>
                 </div>
@@ -67,24 +43,8 @@
                     </div>
                 </div>
             </form>
-            <!-- <form class="form-horizontal" id="recoverform" action="index.html">
-                <div class="form-group ">
-                    <div class="col-xs-12">
-                        <h3>Recover Password</h3>
-                        <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <div class="col-xs-12">
-                        <input class="form-control" type="text" required="" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group text-center m-t-20">
-                    <div class="col-xs-12">
-                        <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
-                    </div>
-                </div>
-            </form> -->
         </div>
     </div>
   </section>
+
+  

@@ -3986,6 +3986,9 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 
 .error .form-control {
   border-color: #ef5350; }
+  
+.error {
+  color: #ef5350!important; }
 
 .validate .form-control {
   border-color: #06d79c; }
