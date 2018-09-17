@@ -28,7 +28,10 @@ export class AlertService {
     this.keepAfterNavigationChange = keepAfterNavigationChange;
     this.subject.next({ type: 'success', text: message });
   }
-
+  error_online(message: string, keepAfterNavigationChange = false) {
+    this.keepAfterNavigationChange = keepAfterNavigationChange;
+    this.subject.next({ type: 'error', text: message });
+  }
   error(message: string, keepAfterNavigationChange = false) {
     this.keepAfterNavigationChange = keepAfterNavigationChange;
     let error = "No se puede procesar tu solicitud";

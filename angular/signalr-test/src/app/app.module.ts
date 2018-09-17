@@ -23,6 +23,7 @@ import { GlobalService } from './service/global.service';
 import { PageModule } from './pages/page.module';
 import { TranslatePipe } from './pipe/lang/translate.pipe';
 import { TranslateService } from './service/lang/translate.service';
+import { ResetPasswordComponent } from './profile/reset-password/reset-password.component';
 
 
 
@@ -36,7 +37,8 @@ import { TranslateService } from './service/lang/translate.service';
     LoginComponent,
     RegisterComponent,
     EqualValidator,
-    TranslatePipe
+    TranslatePipe,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

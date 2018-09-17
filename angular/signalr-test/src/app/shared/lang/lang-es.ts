@@ -10,7 +10,7 @@ export const LANG_ES_TRANS = {
     'User requierd':'Usuario requerido',
     'Pasword requierd':'Contraseña requerida',
     'Sign Up':'Registrate',
-    "Don't have an account? ":"No recuerdas tu cuenta?",
+    "Don't have an account? ":"No tienes una cuenta?",
     'Name':'Nombre',
     'Already have an account?':'Ya tienes una cuenta?',
     'The confirmation have got to be equal the password':'La confirmación debe ser igual a la contraseña',
@@ -20,5 +20,13 @@ export const LANG_ES_TRANS = {
     'You must put the password':'Contraseña es necesaria',
     'You must put the email':'Mail es necesario',
     'Email not is valid':'No es una dirección de mail válida',
-    'User (email)':'Usuario (correo electrónico)'
+    'User (email)':'Usuario (correo electrónico)',
+    'Set segurity code':'Digitar el codigo de seguridad',
+    'Security code':'Códig de seguridad',
+    'Reset':'Resetear',
+    'Set your mail':'Ingresá tu dirección de email',
+    ' Email invalid':'Email invalido',
+    'Are you sure to reset password':'Seguro de resetear tu contraseña',
+    'Reset your password':'Resetear tu contraseña',
+    'Security code send your email':'Codigo de seguridad enviado a su corrreo electrónico'
 };

@@ -12,3 +12,22 @@ C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManag
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.csproj.GenerateResource.Cache
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.dll
 C:\Users\Pablo Silva\Documents\Projects\PresupuestoFamiliar\Solution\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.pdb
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataProvider.dll.config
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataProvider.dll
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataProvider.pdb
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\EntityFramework.dll
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\EntityFramework.SqlServer.dll
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataObject.dll
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataObject.pdb
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\FamilyManager.DataObject.dll.config
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\EntityFramework.xml
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\EntityFramework.SqlServer.xml
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\es\EntityFramework.resources.dll
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.csprojAssemblyReference.cache
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.Migrations.InitialCreate.resources
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.csproj.GenerateResource.cache
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.csproj.CoreCompileInputs.cache
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.csproj.CopyComplete
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.dll
+C:\Solutions\Personal\FamilyManager\FamilyManager.DataProvider\obj\Debug\FamilyManager.DataProvider.pdb

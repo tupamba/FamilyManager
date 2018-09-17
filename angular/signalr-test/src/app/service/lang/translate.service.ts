@@ -19,7 +19,7 @@ export class TranslateService {
   }
   public changeLang(): void {
     // set current language
-    this._currentLang = this._currentLang == 'es'?'en':'es';
+    this._currentLang = this._currentLang == 'es' ? 'en' : 'es';
   }
   private translate(key: string): string {
     // private perform translation

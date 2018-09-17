@@ -13,7 +13,7 @@ namespace FamilyManager.WebApi.Providers
         {
             var fromAddress = new MailAddress("tupamba@gmail.com", "From Name");
             var toAddress = new MailAddress(tosend, "To Name");
-            const string fromPassword = "blanquillo0640";
+            const string fromPassword = "Blanquillo0640";
 
             var smtp = new SmtpClient
             {

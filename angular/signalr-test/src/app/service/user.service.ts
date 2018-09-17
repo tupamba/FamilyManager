@@ -20,7 +20,12 @@ export class UserService {
   create(user: User) {
     return this.http.post(this.config.apiUrl + '/api/Account/Register', user);
   }
-
+  forGotPassword(user: any) {
+    return this.http.post(this.config.apiUrl + '/api/Account/ForgotPassword', user);
+  }
+  resetPassword(user: any) {
+    return this.http.post(this.config.apiUrl + '/api/Account/ResetPassword', user);
+  }
   update(user: User) {
     return this.http.put(this.config.apiUrl + '/users/' + user._id, user, this.jwt());
   }

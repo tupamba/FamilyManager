@@ -20,5 +20,7 @@ export const LANG_EN_TRANS = {
     'You must put the password':'You must put the password',
     'You must put the email':'You must put the email',
     'Email not is valid':'Email not is valid',
-    'User (email)':'User (email)'
+    'User (email)':'User (email)',
+    'Security code':'Security code'
+
 };

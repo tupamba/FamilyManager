@@ -3,13 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './profile/login/login.component';
 import { RegisterComponent } from './profile/register/register.component';
 import { NgModule } from '@angular/core';
+import { ResetPasswordComponent } from './profile/reset-password/reset-password.component';
 
  
 const appRoutes: Routes = [
     // { path: 'confirmInvitation', component: ConfirmInvitationComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
- 
+    { path: 'resetPassword', component: ResetPasswordComponent },
     // otherwise redirect to home
     { path: '', redirectTo: '/login', pathMatch: 'full'  }
 ];
